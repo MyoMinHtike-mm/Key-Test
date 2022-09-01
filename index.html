@@ -1,0 +1,38 @@
+'<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="key-test">Key Testing</div>
+        <div class="key-content">
+            <div class="key-code">13</div>
+            <div class="key-name">Enter</div>
+            <div class="key-detail">
+                <div class="code">13</div>
+                <div class="key">Enter <br> <span>Key Name</span></div>     
+            </div>
+        </div>
+    </div> 
+
+
+    <script>
+
+        let con =  document.querySelector('.key-content');
+        document.addEventListener('keydown', function(e){
+            con.classList.add('active');
+            document.querySelector('.key-code').innerHTML = e.keyCode;
+            document.querySelector('.key-name').innerHTML = e.key;
+            document.querySelector('.code').innerHTML = e.key  + "<br> <span>Key</span>";
+            document.querySelector('.key').innerHTML = e.keyCode + "<br> <span>Key Code</span>";       
+        });
+    </script>
+    
+</body>
+</html>'
